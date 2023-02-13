@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+    <div class="font-big">Халявные деньги</div>
+    <form action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
+
+        <div class="font-major bottom-margin-5 top-margin-40"> {{ form.money.label }}</div>
+        {{ form.money(class="form-control") }}
+        {% for error in form.money.errors %}
+            <div class="alert alert-danger top-margin-5" role="alert">
+                {{ error }}
+            </div>
+        {% endfor %}
+
+        {{ form.submit(type="submit", class="btn btn-primary top-margin-40") }}
+    </form>
+
+{% endblock %}

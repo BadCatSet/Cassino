@@ -1,0 +1,50 @@
+<!doctype html><!--suppress ALL -->
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+              integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+              crossorigin="anonymous">
+
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+        <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.svg') }}">
+        <title>{{ props['titles'][url_for(request.endpoint)] }}</title>
+    </head>
+    <body>
+
+        <nav class="navbar nav-my">
+            <a class="navbar-brand font-big left-margin-5" href="/">{{ props['app_name'] }}</a>
+            {% if current_user.is_authenticated %}
+                <div class="right-align horizontal">
+                    <div class="font-major right-margin-15 vertical">{{ current_user.money }} Рублей</div>
+                    <a class="btn btn-success font-major right-margin-5" href="/pay">Пополнить</a>
+                    <a class="btn btn-success font-major right-margin-5" href="/free">ОМГ это что?</a>
+                    <a class="btn btn-danger font-major right-margin-5" href="/logout">Выйти</a>
+                </div>
+            {% else %}
+                <div class="right-align">
+                    <a class="btn btn-primary font-major right-margin-5" href="/signup">Зарегистрироваться</a>
+                    <a class="btn btn-success font-major right-margin-5" href="/login">Войти</a>
+                </div>
+            {% endif %}
+        </nav>
+
+        <main role="main" class="container">
+            {% block content %}{% endblock %}
+        </main>
+
+        <div class="font-major bottom-left-align">{{ current_user }}</div>
+
+        <script>let a = 1;</script>
+        <script>console.log(a) </script>
+
+        <!-- Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+                crossorigin="anonymous"></script>
+    </body>
+</html>

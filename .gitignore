@@ -1,0 +1,5 @@
+.gitignore
+.idea
+venv
+db/db.db
+log.log

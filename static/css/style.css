@@ -1,0 +1,122 @@
+@font-face {
+    font-family: basic;
+    src: url('/static/fonts/Blogger Sans.otf');
+}
+
+.font-major {
+    font-family: basic, serif;
+    color: #cbcbcb;
+    font-size: 20px;
+}
+
+.font-major-black {
+    font-family: basic, serif;
+    color: #000000;
+    font-size: 20px;
+}
+
+.font-big {
+    font-family: basic, serif;
+    color: #cbcbcb;
+    font-size: 30px;
+}
+
+body {
+    background-color: #171d39;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+main {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    align-items: center;
+    horiz-align: center;
+}
+
+div.block-games {
+    position: absolute;
+    top: 10vh;
+    left: 20vw;
+    height: 80vh;
+    width: 60vw;
+    border-radius: 10px;
+
+    background-color: #1c2344;
+}
+
+div.game-icon {
+    margin: 15px;
+    border-radius: 10px;
+
+    width: calc((60vw - 40px) / 4);
+    height: 10vh;
+    background-color: #242c52;
+
+}
+
+div.align-text-center {
+    align-items: center;
+}
+
+.left-margin-5 {
+    margin-left: 5px;
+}
+
+.right-margin-5 {
+    margin-right: 5px;
+}
+
+.top-margin-5 {
+    margin-top: 5px;
+}
+
+.bottom-margin-5 {
+    margin-bottom: 5px;
+}
+
+.right-margin-15 {
+    margin-right: 15px;
+}
+
+.bottom-margin-15 {
+    margin-bottom: 15px;
+}
+
+.top-margin-40 {
+    margin-top: 40px;
+}
+
+.right-align {
+    position: absolute;
+    right: 0;
+}
+
+.bottom-left-align {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+}
+
+.nav-my {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: auto;
+    background-color: inherit;
+}
+
+div.horizontal {
+    display: flex;
+}
+
+div.vertical {
+    text-align: center;
+    vertical-align: middle;
+    line-height: 44px; /*todo эта строка костыль для выравнивания текста отображения баланса 44- магическое число*/
+}
