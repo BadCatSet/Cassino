@@ -121,8 +121,7 @@ def signup():
 
 @app.route('/')
 def index():
-    return render_template('index.html',
-                           props=props)
+    return redirect('/game1')
 
 
 @app.route('/pay')
@@ -142,3 +141,8 @@ def free():
     return render_template('free.html',
                            props=props,
                            form=form)
+
+
+@app.route('/game1')
+def game1():
+    return render_template('game1.html')
