@@ -11,6 +11,9 @@
               crossorigin="anonymous">
 
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+        {% for i in props.get('additional_css', []) %}
+        <link rel="stylesheet" type="text/css" href="static/css/{{ i }}.css">
+        {% endfor %}
         <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.svg') }}">
         <title>{{ props['titles'][url_for(request.endpoint)] }}</title>
     </head>

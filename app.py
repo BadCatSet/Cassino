@@ -18,7 +18,11 @@ props = {
                '/login': 'Вход',
                '/signup': 'Регистрация',
                '/pay': 'Пополнение',
-               '/free': 'Халява'}
+               '/free': 'Халява',
+               '/game1': 'Коэффициенты'},
+    'additional_css': {
+        'game1': ['game1']
+    }
 }
 
 logging.basicConfig(
@@ -27,8 +31,8 @@ logging.basicConfig(
     datefmt='%Y-%m-%d %H:%M:%S',
     style='$',
     level=logging.DEBUG,
-    encoding='utf-8',
-    force=True)
+    force=True
+)
 
 info('starting app' + ('\n' + '-' * 100 + '\n') * 3)
 
@@ -145,4 +149,9 @@ def free():
 
 @app.route('/game1')
 def game1():
-    return render_template('game1.html')
+    return render_template('game1.html',
+                           props=props)
+
+
+if __name__ == '__main__':
+    app.run()

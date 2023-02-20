@@ -1,0 +1,15 @@
+.number {
+    position: relative;
+    font-size: 20%;
+    transition: all 2s ease;
+}
+
+.numbers {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+.number_block {
+    display: inline-block;
+}
