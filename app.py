@@ -145,4 +145,5 @@ def free():
 
 @app.route('/game1')
 def game1():
-    return render_template('game1.html')
+    return render_template('game1.html',
+                           props=props)

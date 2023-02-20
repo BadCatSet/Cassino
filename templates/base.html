@@ -15,7 +15,7 @@
         <title>{{ props['titles'][url_for(request.endpoint)] }}</title>
     </head>
     <body>
-
+        <!-- NAVBAR -->
         <nav class="navbar nav-my">
             <a class="navbar-brand font-big left-margin-5" href="/">{{ props['app_name'] }}</a>
             {% if current_user.is_authenticated %}
@@ -32,6 +32,11 @@
                 </div>
             {% endif %}
         </nav>
+
+        <!-- SIDEBAR -->
+        <div class="side-my">
+
+        </div>
 
         <main role="main" class="container">
             {% block content %}{% endblock %}
