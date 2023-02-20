@@ -5,7 +5,7 @@ function getRandomInt(max) {
 }
 
 function showSlides2() {
-    let slides = document.getElementsByClassName("number");
+    let slides = document.getElementsByClassName("number_block");
     let itog = 0;
     let it = 0;
     if (24 == counter) {
@@ -42,4 +42,6 @@ function anim(){
         }
     }
 }
+
+
 timerId = setInterval(showSlides2, 100);
