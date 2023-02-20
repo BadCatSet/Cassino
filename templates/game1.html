@@ -2,4 +2,14 @@
 
 {% block content %}
 
+<div class="numbers">
+    {% for i in range(5) %}
+        {% for j in range(5) %}
+            <div class="number_block">
+                <span class="number">{{ j + i * 5 + 1 }}</span>
+            </div>
+        {% endfor %}
+    {% endfor %}
+</div>
+<script src="static/js/game1.js"></script>
 {% endblock %}

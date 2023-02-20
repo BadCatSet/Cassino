@@ -1,0 +1,30 @@
+:root {
+    --color1: #f0c0be;
+    --color2: #efa9a8;
+    --color3: #f091a8;
+    --color4: #f07890;
+    --color5: #ef6178;
+}
+
+.number {
+    position: relative;
+    font-size: 12vh;
+
+}
+
+.numbers {
+    width: 100%;
+    height: 100%;
+    background-color: var(--aye);
+}
+
+.number_block {
+transition: all 2s ease;
+    float: left;
+    text-align: center;
+    margin: 0;
+    padding: auto;
+    width: 20%;
+    height: 20%;
+    display: inline-block;
+}
